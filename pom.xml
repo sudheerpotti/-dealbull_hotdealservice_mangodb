@@ -36,13 +36,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
-=======
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
->>>>>>> beab7bf (first commit)
+
 	</dependencies>
 
 	<build>

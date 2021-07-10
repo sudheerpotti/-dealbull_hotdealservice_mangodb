@@ -33,11 +33,10 @@ public class HotDealController {
 	@Autowired
 	HotDealRepository hotDealRepository;
 	 
-<<<<<<< HEAD
-	@CrossOrigin(origins = "http://localhost:8080")
-=======
+
+
 	@CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
+
 	@PostMapping(value="/hotdeal")
 	public ResponseEntity<?> createHotDeal(@Validated @RequestBody HotDeal hotDeal, UriComponentsBuilder ucBuilder){
 
@@ -49,23 +48,18 @@ public class HotDealController {
 		    headers.setLocation(ucBuilder.path("/api/hotDeal/{id}").buildAndExpand(hotDeal.getId()).toUri());
 		    return new ResponseEntity<>(headers, HttpStatus.CREATED);
 		}
-	 
-<<<<<<< HEAD
-	 /*@CrossOrigin(origins = "http://localhost:8080")
-=======
+
 	 /*@CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
+
 	@GetMapping(value="/hotdeal/{id}")
 	public Optional<HotDeal> getHotDealById(@PathVariable("id")Integer id)
 	{
 		return hotDealService.getHotDealById(id);
 	}*/
 	
-<<<<<<< HEAD
-	@CrossOrigin(origins = "http://localhost:8080")
-=======
+
 	@CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
+
 		@GetMapping(value="/hotdeal/{id}")
 		public ResponseEntity<HotDeal> getHotDeal(@PathVariable("id") Integer id) {
 		    return hotDealRepository.findById(id)
@@ -73,11 +67,8 @@ public class HotDealController {
 		        .orElseThrow(() -> new HotDealNotFoundException(id));
 		}
 
-<<<<<<< HEAD
-	/* @CrossOrigin(origins = "http://localhost:8080")
-=======
 	/* @CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
+
 	@GetMapping(value="/hotdeal")
 	public Iterable<HotDeal> getAllHotDeal()
 	{
@@ -86,11 +77,9 @@ public class HotDealController {
 	}
 	*/
 	
-<<<<<<< HEAD
-	@CrossOrigin(origins = "http://localhost:8080")
-=======
+
 	@CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
+
 		@GetMapping(value="/hotdeal")
 		public ResponseEntity<?> hotdeal() {
 		    List<HotDeal> hotdeal = hotDealService.getAllHotDeal();
@@ -104,22 +93,16 @@ public class HotDealController {
 		    return new ResponseEntity<HashMap<String, Object>>(hmap, HttpStatus.OK);
 	 }
 	 /*
-<<<<<<< HEAD
-	 @CrossOrigin(origins = "http://localhost:8080")
-=======
+
 	 @CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
 	@DeleteMapping(value="/hotdeal/{id}")
 	public void deleteHotDeal(@PathVariable("id")Integer id){
 		hotDealService.deleteHotDeal(id);
 }
 */
 	 
-<<<<<<< HEAD
-	 @CrossOrigin(origins = "http://localhost:8080")
-=======
+
 	 @CrossOrigin(origins = "http://localhost:8003")
->>>>>>> beab7bf (first commit)
 	 @DeleteMapping(value="/hotdeal/{id}")
 	 public ResponseEntity<?> deleteHotDeal(@PathVariable("id") Integer id) {
 	     return hotDealRepository.findById(id)

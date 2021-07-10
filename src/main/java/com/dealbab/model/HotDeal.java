@@ -1,22 +1,14 @@
 package com.dealbab.model;
 
-<<<<<<< HEAD
-=======
+
 import java.util.List;
 
->>>>>>> beab7bf (first commit)
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Document(collection = "HotDeal")
 public class HotDeal {
 
-<<<<<<< HEAD
-
-private Integer id;
-private Products products;
-public Integer getId() {
-=======
 private Integer id;
 private String productTitle;
 private String productShortDesc;
@@ -44,24 +36,13 @@ private String storeRedirectUrl;
 private List<Variant> variant;
 private List<Category> categories ;
 private List<String> region = null;
-public 	Integer getId() {
->>>>>>> beab7bf (first commit)
+
+public Integer getId() {
 	return id;
 }
 public void setId(Integer id) {
 	this.id = id;
 }
-<<<<<<< HEAD
-public Products getProducts() {
-	return products;
-}
-public void setProducts(Products products) {
-	this.products = products;
-}
-@Override
-public String toString() {
-	return "HotDeal [id=" + id + ", products=" + products + "]";
-=======
 public String getProductTitle() {
 	return productTitle;
 }
@@ -229,7 +210,7 @@ public String toString() {
 			+ ", updatedBy=" + updatedBy + ", sid=" + sid + ", oid=" + oid + ", storeName=" + storeName
 			+ ", storeImageUrl=" + storeImageUrl + ", storeRedirectUrl=" + storeRedirectUrl + ", variant=" + variant
 			+ ", categories=" + categories + ", region=" + region + "]";
->>>>>>> beab7bf (first commit)
+
 }
 
 }
